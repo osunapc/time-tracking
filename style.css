@@ -1,23 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
 :root {
-  /*Primary*/  
---Blue: hsl(246, 80%, 60%);
---Light-red: hsl(15, 100%, 70%);
---Soft-blue: hsl(195, 74%, 62%);
---Light-red: hsl(348, 100%, 68%);
---Lime-green: hsl(145, 58%, 55%);
---Violet: hsl(264, 64%, 52%);
---Soft-orange: hsl(43, 84%, 65%);
+	/*Primary*/
+	--Blue: hsl(246, 80%, 60%);
+	--Light-orange: hsl(15, 100%, 70%);
+	--Soft-blue: hsl(195, 74%, 62%);
+	--Light-red: hsl(348, 100%, 68%);
+	--Lime-green: hsl(145, 58%, 55%);
+	--Violet: hsl(264, 64%, 52%);
+	--Soft-orange: hsl(43, 84%, 65%);
+	--white: hsl(0, 0%, 100%);
 
-/*Neutral*/
+	/*Neutral*/
 
---Very-dark-blue: hsl(226, 43%, 10%);
---Dark-blue: hsl(235, 46%, 20%);
---Desaturated-blue: hsl(235, 45%, 61%);
---Pale-Blue: hsl(236, 100%, 87%);
+	--Very-dark-blue: hsl(226, 43%, 10%);
+	--Dark-blue: hsl(235, 46%, 20%);
+	--Desaturated-blue: hsl(235, 45%, 61%);
+	--Pale-Blue: hsl(236, 100%, 87%);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Rubik", sans-serif;
+	background-color: var(--Very-dark-blue);
+	color: var(--Desaturated-blue);
+}
+.main-container {
+	width: 328px;
+	margin: 77px auto;
+}
+.principal {
+	position: relative;
+}
+
+.perfil {
+	background-color: var(--Blue);
+	display: flex;
+	border-radius: 16px;
+	padding: 1.5rem;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+
+	p {
+		color: var(--Pale-Blue);
+		font-size: 0.9em;
+	}
+	h2 {
+		font-size: 1.5em;
+		color: var(--white);
+		font-weight: 300;
+	}
+	.perfil-img img {
+		width: 72px;
+		border: 2px solid var(--white);
+		border-radius: 50%;
+	}
+	.secun {
+		padding: 0.5rem;
+	}
+}
+.perfil-datos {
+	background-color: var(--Dark-blue);
+	border-radius: 16px;
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	height: 100px;
+	margin-top: 85px;
+	padding-top: 55px;
+		position: absolute;
+}
+.datos {
+	color: var(--Desaturated-blue);
+	cursor: pointer;
+}
+.datos:hover {
+	color: var(--white);
+}
+.datos:focus {
+	color: var(--white);
+}
+
+/*section 2*/
+.cards-detalles {
+	margin-bottom: 50px;
+	padding-top: 195px;
+}
+.detalles {
+	margin-bottom: 100px;
+	position: relative;
+}
+.color {
+	background-color: var(--Light-orange);
+	display: flex;
+	justify-content: end;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+	overflow: hidden;
+}
+.color-img {
+	margin-top: -10px;
+}
+.card {
+	background-color: var(--Dark-blue);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 122px;
+	border-radius: 16px;
+	margin-top: -30px;
+	padding: 24px;
+	width: 100%;
+	position: absolute;
+	z-index: 20;
+	cursor: pointer;
+}
+.card:hover {
+	background-color: var(--Desaturated-blue);
+}
+.card-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: var(--white);
+	p {
+		font-weight: 500;
+	}
+}
+.hors {
+	display: flex;
+	justify-content: space-between;
+	.hor-footer {
+		color: var(--white);
+		font-size: 2rem;
+		font-weight: 300;
+	}
+}
+
+/*footer*/
+.attribution {
+	font-size: 14px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 800px) {
+	.main-container {
+    margin: 0 auto;
+    padding: 20px;
+		display: flex;
+		flex-direction: row;
+		width: 1150px;
+    gap: 30px;
+	}
+	.principal {
+		width: 259px;
+		height: 517px;
+		.perfil {
+			height: 355px;
+			flex-direction: column;
+		}
+		h2 {
+			font-size: 2.1rem;
+		}
+	}
+  .perfil-img img {
+		width: 92px;
+    margin-bottom: 15px;
+	
+	}
+	.perfil-datos {
+		height: 330px;
+		flex-direction: column;
+		margin-top: 182px;
+		padding-top: 0px;
+		padding: 25px;
+		justify-content: end;
+		gap: 10px;
+	}
+  .datos {
+    font-size: 1.2rem;
+  }
+	.cards-detalles {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+		padding-top: 0;
+    width: 829px;
+    height: 517px;
+    margin-bottom: 10px;
+	
+}
+.detalles {
+		margin-bottom: 0px;
+    
+    
+    
+    
+	}
+
+	.color {
+		width: 259px;
+	}
+	.card {
+		height: 201px;
+		width: 259px;
+    
+	}
+  .hors {
+	
+    flex-direction: column;
+	
+	.hor-footer {
+		
+		font-size: 4.5rem;
+		
+	}
+}
 }
