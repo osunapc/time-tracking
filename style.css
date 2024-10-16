@@ -105,6 +105,8 @@ body {
 }
 .color-img {
 	margin-top: -10px;
+	width: 80px;
+	height: 80px;
 }
 .card {
 	background-color: var(--Dark-blue);
